@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Dark-blue-main: hsl(217, 54%, 11%);
+    --Dark-blue-card: hsl(216, 50%, 16%);
+    --Dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    background-color: var(--Dark-blue-main);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.container{
+    width: 340px;
+    height: 600px;
+    background-color: var(--Dark-blue-card);
+    border-radius: 12px;
+    padding: 0.2rem;
+    box-shadow: 0 0 8px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.equilibrium-img{
+    border-radius: 12px;
+    display: flex;
+    width: 85%;
+    margin: 1.2rem auto;
+}
+
+.image-container{
+    position: relative;
+}
+
+.overlay{
+    background-color: var(--Cyan);
+    opacity: 40%;
+    position: absolute;
+    border-radius: 12px;
+    top: 20px;
+    right: 24px;
+    left: 24px;
+    bottom: 20px;
+    display: none;
+}
+
+.image-container:hover .overlay,
+.image-container:hover .view-img{
+    display: block;
+    cursor: pointer;
+}
+
+.view-img{
+    margin-right: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.title{
+    color: var(--White);
+    margin-left: 1.5rem;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.title:hover{
+    color: var(--Cyan);
+}
+
+p{
+    color: var(--Soft-blue);
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.details{
+    margin-left: 1.5rem;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.price{
+    color: var(--Cyan);
+    font-weight: 300;
+    font-size: 1rem;
+    margin-right: 5.7rem;
+}
+
+.price-img{
+    vertical-align: sub;
+    width: 4%;
+    margin-right: 0.2rem;
+}
+
+.time{
+    color: var(--Soft-blue);
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.time-img{
+    vertical-align: sub;
+    width: 6%;
+    margin-right: 0.2rem;
+}
+
+hr{
+    width: 85%;
+    border-color: var(--Soft-blue);
+    margin: 1rem auto;
+}
+
+.credit{
+    display: flex;
+    flex-direction: row;
+    margin-left: 1.5rem;
+    gap: 1rem;
+}
+
+.avatar-img > img{
+    border-radius: 50%;
+    width: 35px;
+    display: inline-block;
+    border: 1px solid;
+    border-color: white;
+}
+
+h2{
+    color: var(--Soft-blue);
+    font-size: 1rem;
+    padding-top: 0.5rem;
+}
+
+h2 > span{
+    color: var(--White);
+}
+
+h2 > span:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+}
